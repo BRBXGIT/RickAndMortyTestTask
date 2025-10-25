@@ -29,7 +29,7 @@ fun NavGraphBuilder.homeScreen(
             when(intent) {
                 is HomeScreenIntent.NavigateToCharacterDetails ->
                     navController.navigate(CharacterDetailsScreenRoute(intent.id))
-                else -> homeScreenVM::sendIntent
+                else -> homeScreenVM.sendIntent(intent)
             }
         }
     )
