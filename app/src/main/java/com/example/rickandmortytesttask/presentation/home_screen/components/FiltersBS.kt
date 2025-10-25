@@ -110,7 +110,7 @@ private fun RadioFilterPreview() {
         RadioFilter(
             selected = "TEXT",
             current = "TEXT",
-            onClick = {}
+            onClick = {},
         )
     }
 }
@@ -143,6 +143,7 @@ private fun FilterTextField(
         modifier = Modifier.fillMaxWidth(),
         value = value,
         onValueChange = onValueChange,
+        maxLines = 1,
         label = {
             Text(
                 text = label
