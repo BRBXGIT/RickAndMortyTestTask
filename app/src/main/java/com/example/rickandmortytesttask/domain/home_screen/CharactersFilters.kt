@@ -1,4 +1,4 @@
-package com.example.rickandmortytesttask.domain
+package com.example.rickandmortytesttask.domain.home_screen
 
 data class CharactersFilters(
     val name: String = "",

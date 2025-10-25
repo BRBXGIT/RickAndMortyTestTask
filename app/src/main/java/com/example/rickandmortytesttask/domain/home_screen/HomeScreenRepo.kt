@@ -1,4 +1,4 @@
-package com.example.rickandmortytesttask.domain
+package com.example.rickandmortytesttask.domain.home_screen
 
 import androidx.paging.PagingData
 import com.example.rickandmortytesttask.data.network.home_screen.models.Result

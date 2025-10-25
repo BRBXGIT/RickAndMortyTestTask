@@ -6,7 +6,9 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.paging.compose.collectAsLazyPagingItems
+import com.example.rickandmortytesttask.presentation.character_details_screen.navigation.CharacterDetailsScreenRoute
 import com.example.rickandmortytesttask.presentation.home_screen.screen.HomeScreen
+import com.example.rickandmortytesttask.presentation.home_screen.screen.HomeScreenIntent
 import com.example.rickandmortytesttask.presentation.home_screen.screen.HomeScreenVM
 import kotlinx.serialization.Serializable
 
@@ -23,6 +25,12 @@ fun NavGraphBuilder.homeScreen(
     HomeScreen(
         characters = characters,
         screenState = homeScreenState,
-        onIntent = homeScreenVM::sendIntent
+        onIntent = { intent ->
+            when(intent) {
+                is HomeScreenIntent.NavigateToCharacterDetails ->
+                    navController.navigate(CharacterDetailsScreenRoute(intent.id))
+                else -> homeScreenVM::sendIntent
+            }
+        }
     )
 }

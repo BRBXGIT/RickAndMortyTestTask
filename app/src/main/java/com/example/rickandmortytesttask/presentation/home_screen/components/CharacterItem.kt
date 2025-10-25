@@ -32,9 +32,11 @@ fun CharacterItem(
     status: String,
     species: String,
     gender: String,
-    posterPath: String
+    posterPath: String,
+    onClick: () -> Unit
 ) {
     Surface(
+        onClick = onClick,
         shape = RoundedCornerShape(16.dp),
         color = mColors.surfaceContainer,
         modifier = Modifier
@@ -122,7 +124,8 @@ private fun CharacterItemPreview() {
             status = "Alive",
             species = "Human",
             gender = "Male",
-            posterPath = ""
+            posterPath = "",
+            onClick = {}
         )
     }
 }

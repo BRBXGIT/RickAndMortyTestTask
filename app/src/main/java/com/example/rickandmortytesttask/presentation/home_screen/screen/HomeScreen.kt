@@ -99,7 +99,8 @@ fun HomeScreen(
                             status = current.status,
                             species = current.species,
                             gender = current.gender,
-                            posterPath = current.image
+                            posterPath = current.image,
+                            onClick = { onIntent(HomeScreenIntent.NavigateToCharacterDetails(current.id)) }
                         )
                     }
                 }

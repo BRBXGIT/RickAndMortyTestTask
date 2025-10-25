@@ -1,10 +1,10 @@
 package com.example.rickandmortytesttask.app
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
+import com.example.rickandmortytesttask.presentation.character_details_screen.navigation.characterDetailsScreenRoute
 import com.example.rickandmortytesttask.presentation.home_screen.navigation.HomeScreenRoute
 import com.example.rickandmortytesttask.presentation.home_screen.navigation.homeScreen
 import com.example.rickandmortytesttask.presentation.home_screen.screen.HomeScreenVM
@@ -23,5 +23,7 @@ fun NavGraph() {
             homeScreenVM = homeScreenVM,
             navController = navController
         )
+
+        characterDetailsScreenRoute()
     }
 }

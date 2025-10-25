@@ -8,7 +8,7 @@ import com.example.rickandmortytesttask.data.network.common.NetworkException
 import com.example.rickandmortytesttask.data.network.common.NetworkRequest
 import com.example.rickandmortytesttask.data.network.home_screen.api.HomeScreenApiInstance
 import com.example.rickandmortytesttask.data.network.home_screen.models.Result
-import com.example.rickandmortytesttask.domain.CharactersFilters
+import com.example.rickandmortytesttask.domain.home_screen.CharactersFilters
 
 class CharactersPagingSource(
     private val apiInstance: HomeScreenApiInstance,

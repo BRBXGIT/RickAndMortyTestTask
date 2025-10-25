@@ -3,8 +3,8 @@ package com.example.rickandmortytesttask.presentation.home_screen.screen
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
-import com.example.rickandmortytesttask.domain.CharactersFilters
-import com.example.rickandmortytesttask.domain.HomeScreenRepo
+import com.example.rickandmortytesttask.domain.home_screen.CharactersFilters
+import com.example.rickandmortytesttask.domain.home_screen.HomeScreenRepo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -68,6 +68,9 @@ class HomeScreenVM @Inject constructor(
                 updateScreenState { it.copy(selectedStatus = intent.status) }
             is HomeScreenIntent.ChangeType ->
                 updateScreenState { it.copy(selectedType = intent.type) }
+
+            // Ui intents
+            is HomeScreenIntent.NavigateToCharacterDetails -> {}
         }
     }
 }
