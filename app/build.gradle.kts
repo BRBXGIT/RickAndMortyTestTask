@@ -73,6 +73,8 @@ dependencies {
     ksp(libs.androidx.room.compiler)
     // Coil
     implementation(libs.coil.compose)
+    // Haze
+    implementation(libs.haze.materials)
 
     // === Testing ===
     // Unit tests

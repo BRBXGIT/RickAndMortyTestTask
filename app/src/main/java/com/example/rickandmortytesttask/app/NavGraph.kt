@@ -24,6 +24,6 @@ fun NavGraph() {
             navController = navController
         )
 
-        characterDetailsScreenRoute()
+        characterDetailsScreenRoute(navController)
     }
 }

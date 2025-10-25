@@ -30,6 +30,9 @@ pagingCompose = "3.3.6"
 retrofit = "2.11.0"
 converterGson = "2.11.0"
 
+# Haze
+hazeMaterials = "1.6.6"
+
 # Testing
 mockk = "1.14.5"
 junit = "4.13.2"
@@ -70,6 +73,9 @@ androidx-paging-runtime-ktx = { module = "androidx.paging:paging-runtime-ktx", v
 # Retrofit
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+
+# Haze
+haze-materials = { module = "dev.chrisbanes.haze:haze-materials", version.ref = "hazeMaterials" }
 
 # Unit tests
 junit = { group = "junit", name = "junit", version.ref = "junit" }

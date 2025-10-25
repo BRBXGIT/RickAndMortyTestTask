@@ -3,6 +3,7 @@ package com.example.rickandmortytesttask.presentation.theme
 import androidx.compose.ui.graphics.Color
 
 val background = Color(0xffffffff)
+val onBackground = Color(0xff000000)
 
 val surface = Color(0xff282833)
 val surfaceVariant = Color(0xff3c3c41)

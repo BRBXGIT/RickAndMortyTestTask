@@ -61,6 +61,9 @@ class CharacterDetailsScreenVM @Inject constructor(
     fun sendIntent(intent: CharacterDetailsScreenIntent) {
         when(intent) {
             is CharacterDetailsScreenIntent.FetchDetails -> fetchCharacterDetails(intent.id)
+
+            // Ui intents
+            CharacterDetailsScreenIntent.NavigateUp -> {}
         }
     }
 }

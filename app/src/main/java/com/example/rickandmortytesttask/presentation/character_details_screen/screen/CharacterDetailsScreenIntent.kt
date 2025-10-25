@@ -2,4 +2,6 @@ package com.example.rickandmortytesttask.presentation.character_details_screen.s
 
 sealed interface CharacterDetailsScreenIntent {
     data class FetchDetails(val id: Int): CharacterDetailsScreenIntent
+
+    data object NavigateUp: CharacterDetailsScreenIntent
 }
