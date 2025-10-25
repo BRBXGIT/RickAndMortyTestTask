@@ -23,7 +23,7 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
-import com.example.rickandmortytesttask.data.network.home_screen.models.Result
+import com.example.rickandmortytesttask.data.local.CharacterEntity
 import com.example.rickandmortytesttask.presentation.common.paging.PagingStatesContainer
 import com.example.rickandmortytesttask.presentation.common.snackbars.SnackbarObserver
 import com.example.rickandmortytesttask.presentation.common.snackbars.sendRetrySnackbar
@@ -36,7 +36,7 @@ import kotlinx.coroutines.launch
 
 @Composable
 fun HomeScreen(
-    characters: LazyPagingItems<Result>,
+    characters: LazyPagingItems<CharacterEntity>,
     screenState: HomeScreenState,
     onIntent: (HomeScreenIntent) -> Unit
 ) {
