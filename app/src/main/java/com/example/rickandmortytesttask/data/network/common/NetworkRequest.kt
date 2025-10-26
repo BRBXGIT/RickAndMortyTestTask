@@ -1,5 +1,6 @@
 package com.example.rickandmortytesttask.data.network.common
 
+import android.util.Log
 import retrofit2.Response
 
 object NetworkRequest {

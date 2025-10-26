@@ -8,6 +8,7 @@ fun processNetworkErrors(statusCode: Int): NetworkError {
     return when (statusCode) {
         in 200..299 -> NetworkErrors.SUCCESS
         401 -> NetworkErrors.UNAUTHORIZED
+        404 -> NetworkErrors.NOT_FOUND
         408 -> NetworkErrors.REQUEST_TIMEOUT
         409 -> NetworkErrors.CONFLICT
         413 -> NetworkErrors.PAYLOAD_TOO_LARGE
@@ -21,6 +22,7 @@ fun processNetworkErrorsForUi(error: NetworkError): String {
     return when (error) {
         NetworkErrors.SUCCESS -> "All good"
         NetworkErrors.UNAUTHORIZED -> "Seems you are unauthorized"
+        NetworkErrors.NOT_FOUND -> "Nothing found"
         NetworkErrors.REQUEST_TIMEOUT -> "Timeout please retry"
         NetworkErrors.CONFLICT -> "Something conflict"
         NetworkErrors.PAYLOAD_TOO_LARGE -> "The server load is too large"

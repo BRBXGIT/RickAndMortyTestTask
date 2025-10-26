@@ -13,4 +13,5 @@ enum class NetworkErrors: NetworkError {
     INTERNET,
     SERIALIZATION,
     UNKNOWN,
+    NOT_FOUND,
 }
