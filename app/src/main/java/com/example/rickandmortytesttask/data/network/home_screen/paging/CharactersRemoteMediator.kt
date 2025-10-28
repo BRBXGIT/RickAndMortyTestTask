@@ -56,7 +56,7 @@ class CharactersRemoteMediator(
             val nextPage = getPageNumber(result.info.next)
 
             characterDb.withTransaction {
-                if (loadType == LoadType.PREPEND) characterDb.characterDao.clearAll()
+                if (loadType == LoadType.REFRESH) characterDb.characterDao.clearAll()
                 val characterEntities = result.results.map { it.toCharacterEntity() }
                 characterDb.characterDao.upsertAll(characterEntities)
             }
